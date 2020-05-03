@@ -1,0 +1,10 @@
+K:\Visual Studio Projects\CST-117 MilestoneProject\obj\Debug\CST-117 MilestoneProject.csprojAssemblyReference.cache
+K:\Visual Studio Projects\CST-117 MilestoneProject\obj\Debug\CST_117_MilestoneProject.Form1.resources
+K:\Visual Studio Projects\CST-117 MilestoneProject\obj\Debug\CST_117_MilestoneProject.Properties.Resources.resources
+K:\Visual Studio Projects\CST-117 MilestoneProject\obj\Debug\CST-117 MilestoneProject.csproj.GenerateResource.cache
+K:\Visual Studio Projects\CST-117 MilestoneProject\obj\Debug\CST-117 MilestoneProject.csproj.CoreCompileInputs.cache
+K:\Visual Studio Projects\CST-117 MilestoneProject\bin\Debug\CST-117 MilestoneProject.exe.config
+K:\Visual Studio Projects\CST-117 MilestoneProject\bin\Debug\CST-117 MilestoneProject.exe
+K:\Visual Studio Projects\CST-117 MilestoneProject\bin\Debug\CST-117 MilestoneProject.pdb
+K:\Visual Studio Projects\CST-117 MilestoneProject\obj\Debug\CST-117 MilestoneProject.exe
+K:\Visual Studio Projects\CST-117 MilestoneProject\obj\Debug\CST-117 MilestoneProject.pdb

@@ -10,14 +10,17 @@ namespace CST_117_MilestoneProject
     {
         private string name;
         private double price;
-        
-        
+        private int quantity;
+
+
         //Basic Constructor     
-        public Item(string name, double price) 
+        public Item(string name, double price)
         {
             this.name = name;
             this.price = price;
+            this.quantity = 10;
         }
+        public Item(){}
 
         public string getName() 
         {
@@ -36,6 +39,15 @@ namespace CST_117_MilestoneProject
         public void setPrice(double price)
         {
             this.price = price;
+        }
+
+        public void setQuantity(int quantity)
+        {
+            this.quantity = quantity;
+        }
+        public int getQuantity() 
+        {
+            return this.quantity;
         }
     }
 }

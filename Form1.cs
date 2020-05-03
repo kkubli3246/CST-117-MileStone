@@ -1,4 +1,8 @@
-﻿using System;
+﻿//@Author: Kekoa Kubli
+//@Date: 5/2/2020
+//MileStone CST-117
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,19 +34,63 @@ namespace CST_117_MilestoneProject
             inv.addItem(item4);
 
 
-            string invString = "";
 
             inv.removeItem(item4);
 
-            for (int i = 0; i < inv.getInventory().Count; i++) 
-            {
-                Item current = inv.getInventory()[i];
-                invString += current.getName() + ": " + current.getPrice() + "\n";
-            }
-
-            tb_example.Text = invString;
+           
 
         }
 
+        private void buttonDisplay_Click(object sender, EventArgs e)
+        {
+
+            string invString = "";
+
+            for (int i = 0; i < inv.getInventory().Length; i++)
+            {
+                Item current = inv.getInventory()[i];
+                invString += current.getName() + ": " + current.getPrice() + " x " + current.getQuantity() + " in stock " + "\n";
+            }
+
+            tb_example.Text = invString;
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            //Get the text from the user input and if its a double or a string to use appropriate search
+            if (Double.TryParse(textBoxSearch.Text.ToString(), out double price))
+            {
+                Item result = inv.Search(price);
+
+                if (!string.IsNullOrEmpty(result.getName()))
+                {
+                    string str = result.getName() + " " + result.getPrice() + " x " + result.getQuantity() + " in stock";
+                    tb_example.Text = str;
+                }
+                else
+                {
+                    tb_example.Text = "No item in stock at that price!";
+                }
+            }
+            else
+            {
+                Item result = inv.Search(textBoxSearch.Text.ToString());
+
+                if (!string.IsNullOrEmpty(result.getName()))
+                {
+                    string str = result.getName() + " " + result.getPrice() + " x " + result.getQuantity() + " in stock";
+                    tb_example.Text = str;
+                }
+                else
+                {
+                    tb_example.Text = "No item in stock with that name";
+                }
+            }
+        }
+
+        private void buttonRestockAll_Click(object sender, EventArgs e)
+        {
+            inv.restockAll();
+        }
     }
 }
