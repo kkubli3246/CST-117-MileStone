@@ -8,3 +8,5 @@ K:\Visual Studio Projects\CST-117 MilestoneProject\bin\Debug\CST-117 MilestonePr
 K:\Visual Studio Projects\CST-117 MilestoneProject\bin\Debug\CST-117 MilestoneProject.pdb
 K:\Visual Studio Projects\CST-117 MilestoneProject\obj\Debug\CST-117 MilestoneProject.exe
 K:\Visual Studio Projects\CST-117 MilestoneProject\obj\Debug\CST-117 MilestoneProject.pdb
+K:\Visual Studio Projects\CST-117 MilestoneProject\obj\Debug\CST_117_MilestoneProject.AddItemForm.resources
+K:\Visual Studio Projects\CST-117 MilestoneProject\obj\Debug\CST_117_MilestoneProject.RemoveItemForm.resources

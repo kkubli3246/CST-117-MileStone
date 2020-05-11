@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CST_117_MilestoneProject
 {
-    class Item
+    class Item : IComparable
     {
         private string name;
         private double price;
@@ -48,6 +49,28 @@ namespace CST_117_MilestoneProject
         public int getQuantity() 
         {
             return this.quantity;
+        }
+
+       
+     
+
+        public int CompareTo(object obj)
+        {
+            Item other = obj as Item;
+            if (this.price > other.price)
+            {
+                return 1;
+            }
+            else if (this.price < other.price)
+            {
+                return -1;
+            }
+            else
+            {
+                return 0;
+            }
+            throw new NotImplementedException();
+            
         }
     }
 }

@@ -10,8 +10,8 @@ namespace CST_117_MilestoneProject
     class Inventory
     {
         private string storeName;
-        //private List<Item> itemList = new List<Item>();
-        private Item[] itemList = new Item[0];
+        private List<Item> itemList = new List<Item>();
+        //private Item[] itemList = new Item[0];
 
         //Constructor
         public Inventory(String storeName) 
@@ -22,30 +22,20 @@ namespace CST_117_MilestoneProject
         //Method is used for an inventory to add an item to the list
         public void addItem(Item item) 
         {           
-            Item[] newItemList = new Item[itemList.Length + 1];
-
-            for (int i = 0; i < itemList.Length; i++)
-            {
-                newItemList[i] = itemList[i];
-            }
-            newItemList[newItemList.Length - 1] = item;
-
-            this.itemList = newItemList;
+            this.itemList.Add(item);
 
         }
 
         //Method is used for an invntory to remove an item from the list
         public void removeItem(Item item)
         {
-            List<Item> list = new List<Item>(itemList);
-            list.Remove(item);
-            itemList = list.ToArray();
+            this.itemList.Remove(item);
         }
 
         //Method that is used to restock an Item in the store
         public void restockItem(Item item)
         {
-            for (int i = 0; i < itemList.Length; i++) 
+            for (int i = 0; i < itemList.Count; i++) 
             {
                 if(item.getName() == itemList[i].getName())
                 {
@@ -57,7 +47,7 @@ namespace CST_117_MilestoneProject
         //Method restocks entire inventory
         public void restockAll()
         {
-            for (int i = 0; i < itemList.Length; i++)
+            for (int i = 0; i < itemList.Count; i++)
             {
                 int stock = itemList[i].getQuantity(); 
                 itemList[i].setQuantity(stock += 10);
@@ -69,9 +59,9 @@ namespace CST_117_MilestoneProject
         public Item Search(string itemName)
         {
             Item result = new Item();
-            for (int i = 0; i < itemList.Length; i++) 
+            for (int i = 0; i < itemList.Count; i++) 
             {
-                if (itemList[i].getName() == itemName)
+                if (itemList[i].getName().ToLower() == itemName.ToLower())
                 {
                     result = itemList[i];
                 }
@@ -85,7 +75,7 @@ namespace CST_117_MilestoneProject
         {
             Item result = new Item();
 
-            for (int i = 0; i < itemList.Length; i++)
+            for (int i = 0; i < itemList.Count; i++)
             {
                 if (itemList[i].getPrice() == price)
                 {
@@ -105,7 +95,7 @@ namespace CST_117_MilestoneProject
             this.storeName = storeName;
         }
 
-        public Item[] getInventory()
+        public List<Item> getInventory()
         {
             return this.itemList;
         }
